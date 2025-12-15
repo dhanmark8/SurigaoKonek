@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inbox - SurigaoKonek</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: #f0f2f5; padding-bottom: 110px; }
+        .glass-nav { background: rgba(255, 255, 255, 0.95); -webkit-backdrop-filter: blur(15px); backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.8); box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+        .fab-container { position: absolute; top: -25px; left: 50%; transform: translateX(-50%); z-index: 1050; }
+        .fab-btn { width: 60px; height: 60px; border-radius: 50%; border: 5px solid #f0f2f5; background: linear-gradient(135deg, #0d6efd 0%, #0099ff 100%); transition: transform 0.2s; }
+        .fab-btn:active { transform: scale(0.95); }
+        .nav-icon { font-size: 1.4rem; color: #9ca3af; transition: color 0.2s; }
+        .nav-icon.active { color: #0d6efd; }
+        
+        .chat-item { transition: background 0.2s; cursor: pointer; }
+        .chat-item:hover { background-color: #f8f9fa; }
+        .unread-dot { width: 10px; height: 10px; background-color: #0d6efd; border-radius: 50%; display: inline-block; }
+    </style>
+</head>
+<body>
+
+    <div class="container pt-4">
+        <h3 class="fw-bold mb-4 px-2">Messages</h3>
+
+        <div class="px-2 mb-4">
+            <input type="text" class="form-control rounded-pill border-0 bg-white py-3 shadow-sm" placeholder="Search chats...">
+        </div>
+
+        <div class="list-group rounded-4 shadow-sm border-0 overflow-hidden">
+            
+            <div class="list-group-item border-0 p-3 chat-item d-flex align-items-center gap-3">
+                <div class="position-relative">
+                    <img src="https://ui-avatars.com/api/?name=Joms&background=f0f0f0&color=333" class="rounded-circle" width="50" height="50" alt="image">
+                    <span class="position-absolute bottom-0 end-0 bg-success border border-white rounded-circle p-1"></span>
+                </div>
+                <div class="flex-grow-1 overflow-hidden">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                        <h6 class="fw-bold mb-0">Kuya Joms</h6>
+                        <small class="text-primary fw-bold">2m</small>
+                    </div>
+                    <p class="text-muted small mb-0 text-truncate fw-bold">Yes, meet me at the port around 7AM.</p>
+                </div>
+                <div class="unread-dot"></div>
+            </div>
+
+            <div class="list-group-item border-0 p-3 chat-item d-flex align-items-center gap-3 border-top">
+                <div class="position-relative">
+                    <img src="https://ui-avatars.com/api/?name=Ben&background=d1fae5&color=065f46" class="rounded-circle" width="50" height="50" alt="background">
+                </div>
+                <div class="flex-grow-1 overflow-hidden">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                        <h6 class="fw-bold mb-0">Manong Ben</h6>
+                        <small class="text-muted">1h</small>
+                    </div>
+                    <p class="text-muted small mb-0 text-truncate">Is the mud crab still available?</p>
+                </div>
+            </div>
+
+            <div class="list-group-item border-0 p-3 chat-item d-flex align-items-center gap-3 border-top">
+                <div class="position-relative">
+                    <img src="https://ui-avatars.com/api/?name=Sarah&background=fee2e2&color=991b1b" class="rounded-circle" width="50" height="50" alt = "image">
+                </div>
+                <div class="flex-grow-1 overflow-hidden">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                        <h6 class="fw-bold mb-0">Sarah Tours</h6>
+                        <small class="text-muted">Yesterday</small>
+                    </div>
+                    <p class="text-muted small mb-0 text-truncate">Thanks for applying! We will call you.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <nav class="fixed-bottom mb-4 mx-auto" style="width: 92%; max-width: 450px;">
+        <div class="glass-nav rounded-pill position-relative">
+            <div class="d-flex justify-content-between align-items-center px-4 py-3">
+                <a href="main.html" class="nav-icon" title="Home" aria-label="Home"><i class="bi bi-house-door-fill"></i></a>
+                <a href="inbox.html" class="nav-icon active" title="Inbox" aria-label="Inbox"><i class="bi bi-chat-dots-fill"></i></a>
+                <div style="width: 50px;"></div>
+                <a href="#" class="nav-icon" title="Favorites" aria-label="Favorites"><i class="bi bi-heart-fill"></i></a>
+                <a href="profile.html" class="nav-icon" title="Profile" aria-label="Profile"><i class="bi bi-person-fill"></i></a>
+            </div>
+            <div class="fab-container">
+                <a href="create.html" class="btn btn-primary fab-btn shadow-lg d-flex align-items-center justify-content-center text-white" title="Create" aria-label="Create"><i class="bi bi-plus-lg fs-2"></i></a>
+            </div>
+        </div>
+    </nav>
+    <script>/* Bootstrap JS removed to enforce HTML+CSS only */</script>
+</body>
+</html>
